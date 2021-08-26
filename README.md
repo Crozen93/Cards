@@ -12,6 +12,10 @@
 - Сохранение текущего варианта стола
 - Реализован загрузочный экран
 ---
-![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Landscope.png)
+#### Сцена загузки:
 ![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Portrait%202.png)
+#### Игровая сцена вертикальной ориентации:
 ![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Portrait.png)
+#### Игровая сцена горизонтальной ориентации:
+![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Landscope.png)
+
