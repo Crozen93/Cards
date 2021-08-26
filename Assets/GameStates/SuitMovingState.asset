@@ -15,4 +15,4 @@ MonoBehaviour:
   gameLogick: {fileID: 0}
   timer: 0
   Speed: 700
-  delCards: 55
+  delCards: 65

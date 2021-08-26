@@ -32,7 +32,7 @@ public class SuitState : State
                 }
                 else
                 {
-                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, gameLogick.nn[i], cardSpeed);
+                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, gameLogick.spreadingCardCords[i], cardSpeed);
                 
                 }
             }
@@ -45,7 +45,7 @@ public class SuitState : State
                 }
                 else
                 {
-                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, gameLogick.nn[i], cardSpeed);
+                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, gameLogick.spreadingCardCords[i], cardSpeed);
                  
                 }
             }
@@ -58,7 +58,7 @@ public class SuitState : State
                 }
                 else
                 {
-                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, gameLogick.nn[i], cardSpeed);
+                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, gameLogick.spreadingCardCords[i], cardSpeed);
                   
                 }
             }
@@ -71,7 +71,7 @@ public class SuitState : State
                 }
                 else
                 {
-                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, gameLogick.nn[i], cardSpeed);
+                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, gameLogick.spreadingCardCords[i], cardSpeed);
                    
                 }
             }

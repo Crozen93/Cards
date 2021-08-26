@@ -13,7 +13,8 @@ public class GameLogick : MonoBehaviour
     public State cardsMovingdState;                                 // state - moving cards to a player's hand
     public State suitMovingdState;                                  // state - moving and spreading the cards in the player's hand
     public State movingCenterState;                                 // state - moving the card to the center of the table   
-    public State movingSuitState;                                 // 
+    public State movingOffAciveSuitState;                           // stete - moving and spreading off-active cards+
+
     [Header("Actual state")]
     [SerializeField] private State CurrentState;                    // state "ON" now  
 
@@ -48,7 +49,7 @@ public class GameLogick : MonoBehaviour
     [Header("Image")]
     public Image[] playerHandCards;                                 // Images - all image cards on table
 
-    public Vector3[] nn;
+    public Vector3[] spreadingCardCords;                            // Vector3 cords for spreading cards
 
 
     void Start()
