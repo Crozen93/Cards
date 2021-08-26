@@ -2702,7 +2702,7 @@ MonoBehaviour:
   cardsMovingdState: {fileID: 11400000, guid: bdb49e0ecde2f5f49bb60dea0d8a8c97, type: 2}
   suitMovingdState: {fileID: 11400000, guid: a3e3b4fb7e3fd3342afc8625bf4df056, type: 2}
   movingCenterState: {fileID: 11400000, guid: 8a42217361eabcb4a8c7036e77d87efc, type: 2}
-  movingSuitState: {fileID: 11400000, guid: 0279424eb83ce6a459a3a6149f8e2f4f, type: 2}
+  movingOffAciveSuitState: {fileID: 11400000, guid: 0279424eb83ce6a459a3a6149f8e2f4f, type: 2}
   CurrentState: {fileID: 0}
   suitRandom: 0
   possible: 
@@ -2750,7 +2750,7 @@ MonoBehaviour:
   - {fileID: 435764932}
   - {fileID: 1037317352}
   - {fileID: 1012057349}
-  nn:
+  spreadingCardCords:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
