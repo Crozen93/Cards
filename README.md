@@ -4,5 +4,5 @@
 ##### //
 ---
 ![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Landscope.png)
-####![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Portrait%202.png)
+           ![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Portrait%202.png)
 ![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Portrait.png)
