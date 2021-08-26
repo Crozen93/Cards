@@ -1,7 +1,6 @@
 # Тестовое задание Unity3D
 ## [Build](https://github.com/Crozen93/TestTaskCards/blob/main/Build/build.apk "Android Build")
-#### //
-##### //
+#### Для реализации поставленной задачи был применен паттерн Observer(наблюдатель).
 Особенности проекта:
 - Таргет платформа Android;
 - Если используется смартфон то игра имеет вертикальную ориентацию
@@ -14,6 +13,5 @@
 - Реализован загрузочный экран
 ---
 ![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Landscope.png)
+![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Portrait%202.png)
 ![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Portrait.png)
-      ![Альтернативный текст](https://github.com/Crozen93/Test-Task-Cards/blob/main/Picture/Game_Portrait%202.png)
-
