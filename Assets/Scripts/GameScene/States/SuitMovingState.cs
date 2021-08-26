@@ -6,6 +6,8 @@ using UnityEngine.UI;
 [CreateAssetMenu]
 public class SuitMovingState : State
 {
+    public float timer;
+
     public float Speed;
     public float delCards;
 
@@ -37,7 +39,9 @@ public class SuitMovingState : State
         {            
             gameLogick.playerHandCards[i] = gameLogick.playerHandSecondParent.GetChild(i).GetComponent<Image>();         
         }
-           
+
+        timer += Time.deltaTime;
+
         //moving 
         for (int i = 0; i < gameLogick.playerHandCards.Length; i++)
         {
@@ -51,10 +55,21 @@ public class SuitMovingState : State
                     gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, new Vector3(avgCardsDel += shortCard + 50, -900, 0), cardSpeed);
                 }
                 else
-                {
-                    // playerHandCards[i].transform.localPosition = Vector3.MoveTowards(playerHandCards[i].transform.localPosition, new Vector3(form += form2 - 15, -900, 0), cardSpeed);
+                {                  
                     gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, new Vector3(avgCardsDel += shortCard -20, -900, 0), cardSpeed);
 
+                    if (timer >= 0.3f && gameLogick.playerHandCards[i].transform.localPosition.y <= -900)
+                    {
+                        timer = 0f;
+
+                        for (int z = 0; z < gameLogick.playerHandCards.Length; z++)
+                        {
+                            gameLogick.nn[z] = gameLogick.playerHandCards[z].transform.localPosition;
+                            gameLogick.nn[z].x += 50;
+                        }
+
+                        gameLogick.SetState(gameLogick.movingSuitState);
+                    }
                     Debug.Log("C");
                 }
             }
@@ -70,7 +85,20 @@ public class SuitMovingState : State
                 }
                 else
                 {
-                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, new Vector3(avgCardsDel += shortCard - 15, -900, 0), cardSpeed);
+                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, new Vector3(avgCardsDel += shortCard - 20, -900, 0), cardSpeed);
+
+                    if (timer >= 0.3f && gameLogick.playerHandCards[i].transform.localPosition.y <= -900)
+                    {
+                        timer = 0f;
+
+                        for (int z = 0; z < gameLogick.playerHandCards.Length; z++)
+                        {
+                            gameLogick.nn[z] = gameLogick.playerHandCards[z].transform.localPosition;
+                            gameLogick.nn[z].x += 50;
+                        }
+
+                        gameLogick.SetState(gameLogick.movingSuitState);
+                    }
                     Debug.Log("D");
                 }
             }
@@ -85,10 +113,21 @@ public class SuitMovingState : State
                     gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, new Vector3(avgCardsDel += shortCard + 50, -900, 0), cardSpeed);
                 }
                 else
-                {
-                    // playerHandCards[i].transform.localPosition = Vector3.MoveTowards(playerHandCards[i].transform.localPosition, new Vector3(form += form2 - 15, -900, 0), cardSpeed);
-                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, new Vector3(avgCardsDel += shortCard - 15, -900, 0), cardSpeed);
+                {               
+                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, new Vector3(avgCardsDel += shortCard - 20, -900, 0), cardSpeed);
 
+                    if (timer >= 0.3f && gameLogick.playerHandCards[i].transform.localPosition.y <= -900)
+                    {
+                        timer = 0f;
+
+                        for (int z = 0; z < gameLogick.playerHandCards.Length; z++)
+                        {
+                            gameLogick.nn[z] = gameLogick.playerHandCards[z].transform.localPosition;
+                            gameLogick.nn[z].x += 50;
+                        }
+
+                        gameLogick.SetState(gameLogick.movingSuitState);
+                    }
                     Debug.Log("H");
                 }
             }
@@ -103,18 +142,28 @@ public class SuitMovingState : State
                     gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, new Vector3(avgCardsDel += shortCard + 50, -900, 0), cardSpeed);
                 }
                 else
-                {
-                    // playerHandCards[i].transform.localPosition = Vector3.MoveTowards(playerHandCards[i].transform.localPosition, new Vector3(form += form2 - 15, -900, 0), cardSpeed);
-                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, new Vector3(avgCardsDel += shortCard - 15, -900, 0), cardSpeed);
-                    //  break;
+                {                  
+                    gameLogick.playerHandCards[i].transform.localPosition = Vector3.MoveTowards(gameLogick.playerHandCards[i].transform.localPosition, new Vector3(avgCardsDel += shortCard - 20, -900, 0), cardSpeed);
+
+                    if (timer >= 0.3f && gameLogick.playerHandCards[i].transform.localPosition.y <= -900)
+                    {
+                        timer = 0f;
+
+                        for (int z = 0; z < gameLogick.playerHandCards.Length; z++)
+                        {
+                            gameLogick.nn[z] = gameLogick.playerHandCards[z].transform.localPosition;
+                            gameLogick.nn[z].x += 50;
+                        }
+                        
+                        gameLogick.SetState(gameLogick.movingSuitState);
+                    }
+                    
                     Debug.Log("S");
                 }
             }
 
         }
-    
-
     }
-
+   
    
 }

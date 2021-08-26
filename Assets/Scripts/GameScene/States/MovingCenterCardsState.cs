@@ -36,7 +36,7 @@ public class MovingCenterCardsState : State
 
             gameLogick.possible.Add(gameLogick.suitRandom);
 
- 
+           // gameLogick.SetState(gameLogick.movingSuitState);
             gameLogick.SetState(gameLogick.suitMovingdState);
         }
     }

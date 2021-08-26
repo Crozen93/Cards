@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: SuitMovingState
   m_EditorClassIdentifier: 
   gameLogick: {fileID: 0}
+  timer: 0
   Speed: 700
-  delCards: 50
+  delCards: 55

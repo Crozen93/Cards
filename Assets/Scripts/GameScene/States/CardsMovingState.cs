@@ -37,7 +37,7 @@ public class CardsMovingState : State
             gameLogick.playerHandCards[i].gameObject.SetActive(true);      
             gameLogick.playerHandCards[i].transform.localPosition = Vector3.Lerp(gameLogick.playerHandCards[i].transform.localPosition, new Vector3(avgCardsDel += shortCard, -900, 0), cardSpeed);
 
-            if (gameLogick.playerHandCards[i].transform.localPosition.y <= -880)
+            if (gameLogick.playerHandCards[i].transform.localPosition.y <= -895)
             {
                 gameLogick.SetState(gameLogick.suitMovingdState);
             }
