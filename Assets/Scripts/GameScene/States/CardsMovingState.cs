@@ -6,11 +6,11 @@ using UnityEngine.UI;
 [CreateAssetMenu]
 public class CardsMovingState : State
 {
-    public float Speed;
-    public float delCards;
+    [SerializeField] private float Speed;                 //cards speed
+    [SerializeField] private float spreadCards;           //cards spread
 
-    private float avgCards;
-    private float avgCardsDel;
+    private  float avgCards;
+    private  float avgCardsDel;
     private  float shortCard;
 
 
@@ -22,11 +22,12 @@ public class CardsMovingState : State
 
     void CardsMoving()
     {
+        // calculations
         float cardSpeed = Speed * Time.deltaTime;
-
-        avgCards = gameLogick.playerHandCards.Length * delCards;
+        avgCards = gameLogick.playerHandCards.Length * spreadCards;
         avgCardsDel = 0 - (avgCards / 2);
         shortCard = avgCards / gameLogick.playerHandCards.Length;
+
 
         gameLogick.playerHandCards = new Image[gameLogick.playerHandSecondParent.childCount]; 
 

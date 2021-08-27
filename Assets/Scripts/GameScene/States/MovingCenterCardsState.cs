@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu]
 public class MovingCenterCardsState : State
 {
-    public float timer;
+    [SerializeField] private float timer;           // timer float
 
     public override void Run()
     {

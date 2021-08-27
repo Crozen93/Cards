@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CardsMovingState
   m_EditorClassIdentifier: 
   gameLogick: {fileID: 0}
-  Speed: 2
-  delCards: 78
+  Speed: 3
+  spreadCards: 80

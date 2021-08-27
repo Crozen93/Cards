@@ -5,15 +5,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public class SuitState : State
 {
-    public float Speed;
-
-
+    [SerializeField] private float Speed;               // cards speed
 
     public override void Run()
     {
-        if (isFineshed)
-            return;
-
+ 
         moveSuit();
     }
 

@@ -6,15 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Loading : MonoBehaviour
 {
-    public Slider loadSlider;
-
-    private void Awake()
-    {      
-        CheckResolution();
-    }
+    [SerializeField] private Slider loadSlider;             // load slider
 
     void Start()
     {
+        CheckResolution.instance.ChecPhonekResolution();    // Check resolution
         StartCoroutine(LoadScene());     
     }
 
@@ -32,15 +28,4 @@ public class Loading : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
-    void CheckResolution()
-    {
-        if (Screen.width > Screen.height)
-        {
-            Screen.orientation = ScreenOrientation.Landscape;
-        }
-        else
-        {
-            Screen.orientation = ScreenOrientation.Portrait;
-        }
-    }
 }

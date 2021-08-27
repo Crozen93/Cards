@@ -6,10 +6,9 @@ using UnityEngine.UI;
 [CreateAssetMenu]
 public class SuitMovingState : State
 {
-    public float timer;
-
-    public float Speed;
-    public float delCards;
+    [SerializeField] private float timer;                    // timer float
+    [SerializeField] private float Speed;                    // cards speed
+    [SerializeField] private float spreadCards;              // cards spread
 
     private float avgCards;
     private float avgCardsDel;
@@ -27,11 +26,12 @@ public class SuitMovingState : State
 
     void CardsSuitMoving()
     {
+        // calculations
         float cardSpeed = Speed * Time.deltaTime;
-
-        avgCards = gameLogick.playerHandCards.Length * delCards;
+        avgCards = gameLogick.playerHandCards.Length * spreadCards;
         avgCardsDel = 0 - (avgCards / 2);
         shortCard = avgCards / gameLogick.playerHandCards.Length;
+
 
         gameLogick.playerHandCards = new Image[gameLogick.playerHandSecondParent.childCount];
        
@@ -70,7 +70,6 @@ public class SuitMovingState : State
 
                         gameLogick.SetState(gameLogick.movingOffAciveSuitState);
                     }
-                    Debug.Log("C");
                 }
             }
 
@@ -99,7 +98,6 @@ public class SuitMovingState : State
 
                         gameLogick.SetState(gameLogick.movingOffAciveSuitState);
                     }
-                    Debug.Log("D");
                 }
             }
 
@@ -128,7 +126,6 @@ public class SuitMovingState : State
 
                         gameLogick.SetState(gameLogick.movingOffAciveSuitState);
                     }
-                    Debug.Log("H");
                 }
             }
 
@@ -157,8 +154,6 @@ public class SuitMovingState : State
                         
                         gameLogick.SetState(gameLogick.movingOffAciveSuitState);
                     }
-                    
-                    Debug.Log("S");
                 }
             }
 

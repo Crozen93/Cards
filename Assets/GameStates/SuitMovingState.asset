@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameLogick: {fileID: 0}
   timer: 0
-  Speed: 700
-  delCards: 65
+  Speed: 1000
+  spreadCards: 60

@@ -26,10 +26,10 @@ public class GameLogick : MonoBehaviour
     public int playerScore;                                         // player score variable
 
     [Header("Suits")]
-    [SerializeField] private int C;                                 // number cards - CLUBS on table 
-    [SerializeField] private int D;                                 // number cards - DIAMONDS on table 
-    [SerializeField] private int H;                                 // number cards - HEARTS on table 
-    [SerializeField] private int S;                                 // number cards - SPADES on table 
+    [SerializeField] private int ClubsNum;                           // number cards - CLUBS on table 
+    [SerializeField] private int DiamondsNum;                        // number cards - DIAMONDS on table 
+    [SerializeField] private int HeartsNum;                          // number cards - HEARTS on table 
+    [SerializeField] private int SpadesNum;                          // number cards - SPADES on table 
 
     [Header("Hand Header")]
     public Transform playerHanFirstdParent;                         // object HAND parent first
@@ -52,8 +52,15 @@ public class GameLogick : MonoBehaviour
     public Vector3[] spreadingCardCords;                            // Vector3 cords for spreading cards
 
 
+    private void Awake()
+    {
+        CheckResolution.instance.ChecPhonekResolution(); //Check resolution
+    }
+
     void Start()
     {
+       
+
         SetState(startState);       //set start current state
         
 
@@ -77,12 +84,12 @@ public class GameLogick : MonoBehaviour
     }
 
     private void Update()
-    {     
+    {
         if (!CurrentState.isFineshed)
         {
             CurrentState.Run();
         }
-        
+
         SuitsCheck(); // Check cards suits   
     }
 
@@ -104,116 +111,96 @@ public class GameLogick : MonoBehaviour
     // Suits check in player hand logic
     public void SuitsCheck()
     {
-        if (C != 9)
+        if (ClubsNum != 9)
         {
-            C = 0;
+            ClubsNum = 0;
             for (int i = 0; i < playerHandCards.Length; i++)
             {
                 if (playerHandCards[i].sprite.name == "2C")
                 {
-                    C++;
+                    ClubsNum++;
                 }
             }
         }
 
-        if (D != 9)
+        if (DiamondsNum != 9)
         {
-            D = 0;
+            DiamondsNum = 0;
             for (int i = 0; i < playerHandCards.Length; i++)
             {
                 if (playerHandCards[i].sprite.name == "2D")
                 {
-                    D++;
+                    DiamondsNum++;
                 }
             }
         }
 
-        if (H != 9)
+        if (HeartsNum != 9)
         {
-            H = 0;
+            HeartsNum = 0;
             for (int i = 0; i < playerHandCards.Length; i++)
             {
                 if (playerHandCards[i].sprite.name == "2H")
                 {
-                    H++;
+                    HeartsNum++;
                 }
             }
         }
 
-        if (S != 9)
+        if (SpadesNum != 9)
         {
-            S = 0;
+            SpadesNum = 0;
             for (int i = 0; i < playerHandCards.Length; i++)
             {
                 if (playerHandCards[i].sprite.name == "2S")
                 {
-                    S++;
+                    SpadesNum++;
                 }
             }
         }
  
-
-        SuitNumCheck();
-
       
-                if (C == 0)
-                {
-                    C = 9;
-                }
-
-                if (D == 0 )
-                {
-                    D = 9;
-                }
-
-                if (H == 0)
-                {
-                    H = 9;
-                }
-
-                if (S == 0 ) 
-                {
-                    S = 9;
-                }
-
-            if (C == 9 && suitRandom == 0)
+            if (ClubsNum == 0)
             {
-                C = 0;
+                suitRandom = Random.Range(0, 4);
+                ClubsNum = 9;
             }
-            if (D == 9 && suitRandom == 1)
+
+            if (DiamondsNum == 0 )
             {
-                D = 0;
+                suitRandom = Random.Range(0, 4);
+                DiamondsNum = 9;
             }
-            if (H == 9 && suitRandom == 2)
+
+            if (HeartsNum == 0)
             {
-                H = 0;
+                suitRandom = Random.Range(0, 4);
+                HeartsNum = 9;
             }
-            if (S == 9 && suitRandom == 3)
+  
+            if (SpadesNum == 0 ) 
             {
-                S = 0;
+                suitRandom = Random.Range(0, 4);
+                SpadesNum = 9;
+            }
+
+            if (ClubsNum == 9 && suitRandom == 0)
+            {
+                ClubsNum = 0;
+            }
+            if (DiamondsNum == 9 && suitRandom == 1)
+            {
+                DiamondsNum = 0;
+            }
+            if (HeartsNum == 9 && suitRandom == 2)
+            {
+                HeartsNum = 0;
+            }
+            if (SpadesNum == 9 && suitRandom == 3)
+            {
+                SpadesNum = 0;
             }
       
-    }
-
-    public void SuitNumCheck()
-    {
-       
-            if (C == 0 )
-            {
-                suitRandom = Random.Range(0, 4);
-            }
-            if (D == 0 )
-            {
-                suitRandom = Random.Range(0, 4);
-            }
-            if (H == 0 )
-            {
-                suitRandom = Random.Range(0, 4);
-            }
-            if (S == 0 )
-            {
-                suitRandom = Random.Range(0, 4);
-            }
     }
 
 }

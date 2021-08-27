@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: movingOffAciveSuitState
   m_EditorClassIdentifier: 
   gameLogick: {fileID: 0}
-  Speed: 800
+  Speed: 1000
