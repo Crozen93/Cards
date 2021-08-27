@@ -16,8 +16,10 @@ public class MovingCenterCardsState : State
 
     void MovingCenter(int numButton)
     {
-
+        // calculations
         float cardSpeed = 5f * Time.deltaTime;
+
+        //move card in center table
         gameLogick.cards[numButton].transform.localPosition = Vector3.Lerp(gameLogick.cards[numButton].transform.localPosition, new Vector3(0, -100, 0), cardSpeed);
 
         for (int i = 0; i < gameLogick.playerHandCards.Length; i++)
