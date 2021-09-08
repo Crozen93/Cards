@@ -1,6 +1,6 @@
-# Тестовое задание Unity3D
+# Cards example - Unity3D
 ## [Build](https://github.com/Crozen93/TestTaskCards/blob/main/Build/build.apk "Android Build")
-#### Для реализации поставленной задачи был применен паттерны: Observer(наблюдатель), Singleton(одиночка).
+#### Был применен паттерны: Observer(наблюдатель), Singleton(одиночка).
 Особенности проекта:
 - Таргет платформа Android;
 - Если используется смартфон то игра имеет вертикальную ориентацию
